@@ -1,6 +1,6 @@
-## Presentation Template
+## Qualifying Exam Presentation
 
-A LaTeX Beamer template for presentations using the Metropolis theme.
+Slides for my qualifying exam presentation.
 
 ### Authorship
 
