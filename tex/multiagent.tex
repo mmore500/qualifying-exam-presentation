@@ -1,8 +1,21 @@
 \section{Multi-Agent Systems}
 
 \begin{frame}{Definition}
-The term multi-agent system (MAS) denotes a scenario where a behavior manifests, or in more application-driven contexts a goal is accomplished, via a collection of interacting autonomous entities \cite{ferber2003agents}.
-Although each entity only has access to a subset of relevant information and possesses only humble computational and/or physical capabilities, cooperation between agents can yield sophisticated and useful outcomes  \cite{panait2005cooperative}.
+\begin{itemize}
+  \item many interacting autonomous entities
+  \item each entity only uses subset of relevant information
+  \item humble computational and/or physical capabilities
+  \item key: interaction between agents
+  \item \cite{panait2005cooperative,ferber2003agents}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Applications}
+\begin{itemize}
+  \item modeling natural systems
+  \item engineering distributed systems
+  \item algorithm design
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Multi-Agent System Example: Ant Foraging}
@@ -35,6 +48,34 @@ Graphics from \cite{reid2015army}.
 Kilobot dispersal task.TODO
 Graphics from \cite{ssr2011demonstrations}.
 }
+
+\end{figure}
+
+\end{frame}
+
+\begin{frame}{Multi-Agent System Example: Ant-Colony Optimization}
+
+\begin{figure}
+
+\begin{columns}
+\begin{column}{0.7\textwidth}
+\foreach \n in {1,...,6}{%
+\includegraphics<\n>[trim={0 3cm 0 0},clip,width=\textwidth]{aco-france/frame-\n}%
+}%
+\end{column}
+\begin{column}{0.3\textwidth}
+\caption{
+Ant-colony optimzation applied to the traveling salesman problem \cite{dorigo1996ant}.
+Graphics adapted from Nojhan - Own work, CC BY-SA 3.0, \url{https://commons.wikimedia.org/w/index.php?curid=820846}.
+}
+\end{column}
+\end{columns}
+
+\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)-(1,0)$) {\includegraphics<3,4>[width=1cm,angle=30,origin=c]{ant}};
+\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)+(1,1)$) {\includegraphics<3,4>[width=1cm,angle=-30,origin=c]{ant}};
+\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)-(1,2)$) {\includegraphics<3,4>[width=1cm,angle=120,origin=c]{ant}};
+\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)-(-1,2)$) {\includegraphics<3,4>[width=1cm,angle=-150,origin=c]{ant}};
+\tikz[remember picture, overlay] \node[anchor=center] at ($(current page.center)-(3,0)$) {\includegraphics<3,4>[width=1cm,angle=0,origin=c]{ant}};
 
 \end{figure}
 
