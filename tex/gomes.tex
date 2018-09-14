@@ -49,18 +49,7 @@ Figure 1 from \cite{gomes2015cooperative}.
 
 \end{frame}
 
-\begin{frame}{Treatments}
-
-\Large
-\begin{itemize}
-\item \textit{Base} ---  base CCEA
-\item \textit{Inc} --- incremental evolution
-\item \textit{NInc} --- non-cooperative incremental evolution
-\item \textit{NS} --- novelty-driven coevolution
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Results}
+\begin{frame}{Problem Description}
 
 \begin{figure}
 \begin{columns}
@@ -75,6 +64,30 @@ Right column of Figure 2 from \cite{gomes2015cooperative}.
 \end{columns}
 \end{figure}
 
+\end{frame}
+
+\begin{frame}{Treatments}
+
+\Large
+\begin{itemize}
+\item \textit{Base} ---  base cooperative co-evolutionary algorithm
+\begin{itemize}
+\item separate populations for drone, ground robot controllers
+\item each drone controllers evaluated with best ground robot controller and vice versa
+\end{itemize}
+\item \textit{Inc} --- incremental evolution
+\begin{itemize}
+\item stepping stones for drone: maintaining proper altitude, navigating towards rover
+\end{itemize}
+\item \textit{NInc} --- non-cooperative incremental evolution
+\begin{itemize}
+\item stepping stones for drone while rover frozen
+\end{itemize}
+\item \textit{NS} --- novelty-driven coevolution
+\begin{itemize}
+\item select new behaviors over previously-encountered behaviors
+\end{itemize}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{Results}
@@ -98,7 +111,7 @@ more difficult conditions (\textit{Fix-Sep}, \textit{Var-Tog},\textit{Var-Sep}) 
 \item \textit{NInc} treatment: evolvability constraints + context-dependence
 \end{itemize}
 
-generalizable to other problem domains (in principle)
+CCEA + ``jumpstarting'' is generalizable to other problem domains (in principle)
 
 weakness: need to know expected cooperating roles \textit{a priori}
 
