@@ -2,6 +2,8 @@
 
 \begin{frame}{Defining Heterogeneity}
 
+\Large
+
 heterogeneity: NOT absolute homogeneity
 \begin{itemize}
 \item all agents \textit{completely} identical
@@ -36,6 +38,8 @@ at least \textit{some} heterogeneity seems essential
 
 \begin{frame}{Genetic Heterogeneity}
 
+\Large
+
 \begin{itemize}
 \item configuration heterogeneity
 \item specialization
@@ -52,33 +56,152 @@ alternative: plasticity \cite{tuci2008evolving}
 
 \begin{frame}{Credit Assignment Problem}
 
-genetics has a specific connotation in evolutionary computing
+\Large
 
-crux: nailing down value of individual contributions to group performance is nontrivial \cite{panait2005cooperative}
+evolutionary approach: need metric of genome performance for selection
+\begin{itemize}
+\item clonal groups: exploit symmetry, just use group performance metric
+\item non-clonal groups: ???
+\end{itemize}
+
+\textbf{crux:} nailing down value of individual contributions to group performance is nontrivial \cite{panait2005cooperative}
 
 \end{frame}
 
 \begin{frame}{Credit Assignment Problem}
 
-intuition: hockey team
+\Large
 
-weakens selection for good/against bad solutions
 \begin{itemize}
-\item intuition: randomly drawn teams of varsity and junior varsity players $\rightarrow$ own performance weakly correlates with team performance
-\item problem gets worse as teams get bigger
+\item weakening selection \cite{knudson2010coevolution, waibel2009genetic}
+\item incentivizing defection \cite{knudson2010coevolution, waibel2009genetic}
+\item context dependence \cite{gomes2015cooperative}
 \end{itemize}
 
-can incentivize defection
-\begin{itemize}
-\item intuition: if players rewarded for goals they make, they will take as many shots as possible (they make more goals, but team makes fewer goals)
-\end{itemize}
+\pause
 
-requires (appropriate) cooperating partner/context-dependent
-\begin{itemize}
-\item intuition: player who is great at passing might be on a team without any passers
-\end{itemize}
+intuition: hypothetical hockey examples
 
 \end{frame}
+
+\begin{frame}{Credit Assignment Problem: Weakening Selection}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+{\Large
+randomly drawn teams of professional and amateur players
+\begin{align*}
+\bm{\downarrow}
+\end{align*}
+own performance weakly correlates with team performance
+
+}
+\end{column}
+\begin{column}{0.5\textwidth}
+
+
+\begin{figure}
+\begin{subfigure}[b]{\textwidth}
+\begin{columns}
+\begin{column}{0.05\textwidth}
+\caption{}
+\label{fig:professional-hockey}
+\end{column}
+\begin{column}{0.95\textwidth}
+\includegraphics[width=\textwidth]{professional-hockey}
+\end{column}
+\end{columns}
+\end{subfigure}%
+
+\begin{subfigure}[b]{\textwidth}
+\begin{columns}
+\begin{column}{0.05\textwidth}
+\caption{}
+\label{fig:amateur-hockey}
+\end{column}
+\begin{column}{0.95\textwidth}
+\includegraphics[width=\textwidth]{amateur-hockey}
+\end{column}
+\end{columns}
+\end{subfigure}
+
+\caption{
+Professional (\ref{fig:professional-hockey}) and amateur (\ref{fig:amateur-hockey}) hockey players.
+}
+
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Credit Assignment Problem: Weakening Selection}
+
+\vspace{2ex}
+
+{\Large
+selection gets weaker as groups get bigger
+}
+
+\begin{figure}
+\includegraphics[width=\textwidth]{crowded-rink}
+\caption{A crowded hockey rink.}
+\label{fig:crowded-rink}
+\end{figure}
+
+
+\end{frame}
+
+\begin{frame}{Credit Assignment Problem: Incentivizing Defection}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+{\Large
+players rewarded for goals \textit{they} score
+\begin{align*}
+\bm{\downarrow}
+\end{align*}
+players take ``Slap Shots'' instead of passing
+\begin{align*}
+\bm{\downarrow}
+\end{align*}
+overall, team makes fewer goals
+}
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=\textwidth]{slap-shot}
+\caption{
+A ``Slap Shot.''
+}
+\label{fig:slap-shot}
+\end{figure}
+\end{column}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Credit Assignment Problem: Context Dependence}
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\Large
+success of Royal Road passer depends on partner near the goal
+\end{column}
+\begin{column}{0.5\textwidth}
+\begin{figure}
+\includegraphics[width=\textwidth]{royal-road-pass}
+\caption{
+A pass across the ``Royal Road.''
+}
+\label{fig:royal-road-pass}
+\end{figure}
+\end{column}
+\end{columns}
+
+
+\end{frame}
+
 
 \begin{frame}{Credit Assignment Problem}
 
