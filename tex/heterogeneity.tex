@@ -1,15 +1,22 @@
-\section{Heterogeneity in Multi-Agent Systems}
+\section{Genetic Heterogeneity in Multi-Agent Systems}
 
-\begin{frame}{Heterogeneity: Not Absolute Homogeneity}
+\begin{frame}{Defining Heterogeneity}
 
-absolute heterogeneity = standing between two mirrors
+heterogeneity: NOT absolute homogeneity
+\begin{itemize}
+\item all agents \textit{completely} identical
+\item intuition: standing between two mirrors
+\end{itemize}
 
-can't solve leader election problem \cite{angluin1980local,banda2015configuration}
+\vspace{2ex}
+
+necessary to solve leader election problem \cite{angluin1980local,banda2015configuration}
 
 \end{frame}
 
 \begin{frame}{Multiple Sources of Heterogeneity}
 
+heterogeneous groups can solve leader election:
 \begin{itemize}
 \item configuration \cite{frederickson1987electing}
 \item state \cite{banda2015configuration}
@@ -17,7 +24,13 @@ can't solve leader election problem \cite{angluin1980local,banda2015configuratio
 \item stochasticity \cite{itai1981symmetry}
 \end{itemize}
 
-at least \textit{some}
+\vspace{2ex}
+
+at least \textit{some} heterogeneity seems essential
+\begin{itemize}
+\item ... and is ubiquitous in multi-agent systems \cite{atodd2015quantitative, perna2012individual, fayeez2017h}
+\end{itemize}
+
 
 \end{frame}
 
@@ -25,6 +38,54 @@ at least \textit{some}
 
 \begin{itemize}
 \item configuration heterogeneity
+\item specialization
+\begin{itemize}
+\item division of labor \cite{potter2001heterogeneity}
+\item different capabilities (e.g., ground and aerial robots) \cite{gomes2015cooperative, mathews2012supervised}
+\item variation in unit-to-unit hardware \cite{pugh2007parallel, duarte2016evolution}
+\end{itemize}
+\end{itemize}
+
+alternative: plasticity \cite{tuci2008evolving}
+
+\end{frame}
+
+\begin{frame}{Credit Assignment Problem}
+
+genetics has a specific connotation in evolutionary computing
+
+crux: nailing down value of individual contributions to group performance is nontrivial \cite{panait2005cooperative}
+
+\end{frame}
+
+\begin{frame}{Credit Assignment Problem}
+
+intuition: hockey team
+
+weakens selection for good/against bad solutions
+\begin{itemize}
+\item intuition: randomly drawn teams of varsity and junior varsity players $\rightarrow$ own performance weakly correlates with team performance
+\end{itemize}
+
+can incentivize defection
+\begin{itemize}
+\item intuition: if players rewarded for goals they make, they will take as many shots as possible (they make more goals, but team makes fewer goals)
+\end{itemize}
+
+requires (appropriate) cooperating partner/context-dependent
+\begin{itemize}
+\item intuition: player who is great at passing might be on a team without any passers
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Credit Assignment Problem}
+
+three approaches:
+\begin{itemize}
+\item designing individual payoffs in order to align with individual contribution to group success \cite{waibel2009genetic}
+\item calculating fitness as the difference between group performance and estimated group performance without the contributions of an agent \cite{knudson2010coevolution}
+\item cooperative co-evolution, where individuals in distinct subpopulations corresponding to distinct roles are selected by evaluation only with the best-performing individuals from other subpopulations \cite{gomes2015cooperative}
 \end{itemize}
 
 \end{frame}
