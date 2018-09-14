@@ -19,12 +19,24 @@ Figure 2 from \cite{knudson2010coevolution}.
 \end{frame}
 
 \begin{frame}{Treatments}
-
+\Large
 \begin{itemize}
 \item system
+\begin{itemize}
+\item selection $\sim$ group performance
+\end{itemize}
 \item local
+\begin{itemize}
+\item selection $\sim$ \# waypoints an individual visited
+\end{itemize}
 \item difference
+\begin{itemize}
+\item selection $\sim$ group performance $-$ group performance w/o individual
+\end{itemize}
 \item random
+\begin{itemize}
+\item control treatment
+\end{itemize}
 \end{itemize}
 
 \end{frame}
@@ -69,11 +81,26 @@ Right column of Figure 7 from \cite{knudson2010coevolution}.
 
 \begin{frame}{Discussion}
 
-difference metric generalizes to other problem domains
+difference metric is (in principle) generalizable to other problem domains
 
 however, with large groups and without shortcuts it could become computationally prohibitive
 
-also, might break down for too much specialization
-* analogy to curling sweepers vs throwers
+assumption for shortcut:
+effect of agent on other agents is negligible compared to direct effect of agent on objective
+
+concern:
+difference metric might break down in some cases with extreme specialization
+
+\end{frame}
+
+\begin{frame}{Discussion}
+
+How much does team score decrease when removing a sweeper versus removing the thrower?
+
+\begin{figure}
+\includegraphics[width=\textwidth]{curling-team}
+\caption{A curling team in action.}
+\label{fig:curling-team}
+\end{figure}
 
 \end{frame}
